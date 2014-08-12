@@ -1,0 +1,31 @@
+{
+  "name": "no-elements-for-you",
+  "version": "0.0.0",
+  "description": "instrument code and throw if it ever touches an Element",
+  "main": "nope.js",
+  "scripts": {
+    "test": "jasmine-node test/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/btford/no-elements-for-you.git"
+  },
+  "keywords": [
+    "tool",
+    "code",
+    "instrumentation",
+    "browser",
+    "ahaha"
+  ],
+  "author": "Brian Ford <btford@umich.edu>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/btford/no-elements-for-you/issues"
+  },
+  "homepage": "https://github.com/btford/no-elements-for-you",
+  "dependencies": {
+    "falafel": "^0.3.1",
+    "fn-body": "0.0.1",
+    "fn-params": "0.0.1"
+  }
+}
