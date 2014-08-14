@@ -2,7 +2,7 @@ var falafel = require('falafel');
 var body = require('fn-body');
 var params = require('fn-params');
 
-module.exports.disallowedContext = function (fn) {
+module.exports = function (fn, error) {
   var src = body(fn);
   var fnParams = params(fn);
   var newSrc = falafel(src, function (node) {
@@ -13,9 +13,7 @@ module.exports.disallowedContext = function (fn) {
       }
     }
   });
-  var msgFunction = this.onMessage;
-  newSrc += '; function ____ (val) { if (val instanceof Element) { ' + msgFunction + ' } return val; };';
+  error = error || 'throw new Error("DOM modification");';
+  newSrc += '; function ____ (val) { if (val instanceof Element) { ' + error + ' } return val; };';
   return Function.apply(null, fnParams.concat(newSrc));
 }
-
-module.exports.onMessage = 'throw new Error("DOM modification");';
