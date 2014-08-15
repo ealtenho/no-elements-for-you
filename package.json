@@ -32,7 +32,7 @@
   "dependencies": {
     "browserify": "^5.10.0",
     "falafel": "^0.3.1",
-    "fn-body": "0.0.1",
+    "fn-body": "git://github.com/ealtenho/fn-body.git#feat-named-functions",
     "fn-params": "0.0.1"
   }
 }
